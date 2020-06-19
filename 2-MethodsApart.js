@@ -1,9 +1,17 @@
+const myMethods = {
+	eat: function() {
+		console.log(`${this.name} is eating`);
+	},
+	sleep: function() {
+		console.log("Start sleeping please!");
+	}
+};
+
 function Animal(name) {
 	let animal = {};
 	animal.name = name;
-	animal.eat = function() {
-		console.log(`${this.name} is eating`);
-	}
+	animal.eat = myMethods.eat;
+	animal.speep = myMethods.sleep;
 	return animal;
 }
 
